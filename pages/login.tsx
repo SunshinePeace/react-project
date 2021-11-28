@@ -38,17 +38,17 @@ const Login: React.FC = function () {
                     <Typography>
                         <TextField variant="standard" label='Password' placeholder='Enter password' type="password" fullWidth />
                         </Typography>
-                    <Typography sx={{ fontSize: 16, fontFamily: 'Calibri' }} align='left' color="black">
-                        <Link href="../forgetpw">
+                    <Typography sx={{ fontSize: 16, fontFamily: 'Calibri' }} align='left'>
+                        <Link href="../Components/Phase1/forgetpw">
                         Forget Password ?
                         </Link>
                     </Typography>
-                    <Typography sx={{ fontSize: 16, fontFamily: 'Calibri' }} align='left' color="black">Do not have an account?
-                        <Link href="../signup" sx={{ fontSize: 16, fontFamily: 'Calibri' }}>
+                    <Typography sx={{ fontSize: 16, fontFamily: 'Calibri' }} align='left'>Do not have an account?
+                        <Link href="../Components/Phase1/signup" sx={{ fontSize: 16, fontFamily: 'Calibri' }}>
                             Sign Up 
                         </Link>
                     </Typography>
-                    <Button type='submit' color='secondary' fullWidth> Sign In </Button>
+                    <Button color='secondary' fullWidth> Sign In </Button>
 
                     </Paper>
                 </Box>
