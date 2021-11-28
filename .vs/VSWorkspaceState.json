@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\pages",
+    "\\pages\\api",
+    "\\public"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\public\\90604070_p0.png",
   "PreviewInSolutionExplorer": false
 }
