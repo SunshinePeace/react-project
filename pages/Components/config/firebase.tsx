@@ -1,13 +1,14 @@
 import firebase, { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth';
+import config from './config';
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_APP_ID
+    apiKey: "AIzaSyAYqlWAxZfVFNhVgsuGtrXNlo3c8Op3QB0",
+    authDomain: "social-media-d8fd6.firebaseapp.com",
+    projectId: "social-media-d8fd6",
+    storageBucket: "social-media-d8fd6.appspot.com",
+    messagingSenderId: "936530922097",
+    appId: "1:936530922097:web:6126823385c6067fd169d0"
 }
 
 

@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\pages",
+    "\\pages\\Components",
+    "\\pages\\Components\\config",
+    "\\pages\\Components\\Phase1"
   ],
-  "SelectedNode": "\\pages",
+  "SelectedNode": "\\pages\\Components\\config\\config.ts",
   "PreviewInSolutionExplorer": false
 }
