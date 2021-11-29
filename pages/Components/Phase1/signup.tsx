@@ -1,17 +1,32 @@
 import React, { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Box, Card, CardHeader, Grid, Paper } from "@mui/material";
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
+import { Box, Card, CardHeader, Grid, Link, Paper } from "@mui/material";
 import Typography from '@mui/material/Typography';
-import { FormControlLabel } from "@mui/material";
-import { CheckBox } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../config/firebase";
 
 
 const signup: React.FC = function () {
 
+    //const history = useNavigate();
 
+    const [registering, setRegistering] = useState<boolean>(false);
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
+    const [confirmpw, setConfirmPw] = useState<string>('');
+    const [error, setError] = useState<string>('');
+    const [submit, setsubmitting] = useState<boolean>(false);
+
+
+    const signUpWithEmailAndPassword = () => {
+        if (error !== '') setError('');
+
+        setRegistering(true);
+
+
+
+    }
     // function 1
     // function 2 ... 
 
@@ -24,22 +39,30 @@ const signup: React.FC = function () {
             </Typography>
             <Typography sx={{ fontSize: 16, fontFamily: 'Calibri' }} align ='left' color="black">
                 Email Address
-                <TextField placeholder="Enter Email address" variant='standard' fullWidth required />
+                <TextField value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email address" variant='standard' fullWidth required />
             </Typography>
                
             <Typography sx={{ fontSize: 16, fontFamily: 'Calibri' }} align='left' color="black">
                 Password
-                <TextField placeholder="At least 8 characters" type="password" variant='standard' fullWidth required />
+                <TextField value={password} onChange={(e) => setPassword(e.target.value)} placeholder="At least 8 characters" type="password" variant='standard' fullWidth required />
             </Typography>
            
             <Typography sx={{ fontSize: 16, fontFamily: 'Calibri' }} align='left' color="black">
                 Confirm Password
-             <TextField placeholder="Enter password again" type="password" variant='standard' fullWidth required />
+                <TextField value={confirmpw} onChange={(e) => setConfirmPw(e.target.value)} placeholder="Enter password again" type="password" variant='standard' fullWidth required />
             </Typography>
 
             <Typography>
-                <Button color='secondary' fullWidth> Sign In </Button>
-                </Typography>
+                <Button type = 'submit' color='secondary' fullWidth> Sign Up </Button>
+            </Typography>
+            <div>
+            <Typography sx={{ fontSize: 10, fontFamily: 'Calibri', maxWidth: "500px"}} align='center' color="grey" >
+                    Already have account?
+                    <Link href="../../login" sx={{ fontSize: 10, fontFamily: 'Calibri' }}>
+                        Sign Up
+                    </Link>
+            </Typography>
+            </div>
     
         </Paper>
 

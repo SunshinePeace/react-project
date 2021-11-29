@@ -3,6 +3,7 @@ import { Box, CardMedia, Typography } from '@mui/material';
 import { Link } from '@mui/material';
 import { Button, Grid, Paper, TextField } from '@mui/material';
 import React from 'react';
+import AuthContextProvider from './Components/contexts/AuthContext';
 import { Title } from './login.style';
 
 const Login: React.FC = function () {
@@ -13,7 +14,7 @@ const Login: React.FC = function () {
     
 
     return (
-
+        <AuthContextProvider>
         <Box
             sx={{
                 display: 'inline-flex',
@@ -37,12 +38,10 @@ const Login: React.FC = function () {
                     <TextField variant="standard" label='Email' placeholder='Enter email address' fullWidth />
                     <Typography>
                         <TextField variant="standard" label='Password' placeholder='Enter password' type="password" fullWidth />
-                        </Typography>
-                    <Typography sx={{ fontSize: 16, fontFamily: 'Calibri' }} align='left'>
-                        <Link href="../Components/Phase1/forgetpw">
-                        Forget Password ?
-                        </Link>
                     </Typography>
+                     <Link href="../Components/Phase1/forgetpw">
+                     <Typography sx={{ fontSize: 16, fontFamily: 'Calibri' }} align='left'> Forget Password? </Typography>
+                    </Link>
                     <Typography sx={{ fontSize: 16, fontFamily: 'Calibri' }} align='left'>Do not have an account?
                         <Link href="../Components/Phase1/signup" sx={{ fontSize: 16, fontFamily: 'Calibri' }}>
                             Sign Up 
@@ -54,8 +53,8 @@ const Login: React.FC = function () {
                 </Box>
 
 
-        </Box>
-
+            </Box>
+            </AuthContextProvider>
         
     )
 
